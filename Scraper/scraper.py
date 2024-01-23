@@ -138,7 +138,10 @@ def main():
     # Convert to JSON
     json_data = json.dumps(all_events, indent=2)
 
-    print(json_data)
+    with open('events_data.json', 'w') as file:
+        file.write(json_data)
+
+    #print(json_data)
 
 if __name__ == "__main__":
     main()
