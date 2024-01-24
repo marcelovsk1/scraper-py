@@ -132,16 +132,15 @@ def main():
     eventbrite_events = scrape_eventbrite_events(eventbrite_driver)
     eventbrite_driver.quit()
 
-    # Merge all events
     all_events = facebook_events + ticketmaster_events + eventbrite_events
 
     # Convert to JSON
     json_data = json.dumps(all_events, indent=2)
 
-    with open('events_data.json', 'w') as file:
-        file.write(json_data)
+    #with open('events_data.json', 'w') as file:
+        #file.write(json_data)
 
-    #print(json_data)
+    print(json_data)
 
 if __name__ == "__main__":
     main()
